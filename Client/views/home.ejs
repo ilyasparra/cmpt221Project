@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crypto Home</title>
+    <link rel='stylesheet' href='/css/home.css'>
+    <link rel='stylesheet' href='/css/global.css'>
+    <link rel='stylesheet' href='/css/modal.css'>
+</head>
+
+<body onload="init()">
+    <button id="Home">Home</button>
+    <% if (isLoggedInUser) { %>
+        <button id="Portfolio" type="button">Portfolio</button>
+        <button id="YourAccount" type="button">Your Account</button>
+        <button id="Logout" type="button">Logout</button>
+        <table>
+            <thead>
+                <tr>
+                    <th id="Rank">Rank</th>
+                    <th id="Name">Name</th>
+                    <th id="Symbol">Symbol</th>
+                    <th id="Price">Price (USD)</th>
+                    <th id="Change">24h Change (%)</th>
+                    <th id="MarketCap">Market Cap (USD)</th>
+                    <th id="Supply">Supply</th>
+                    <th id="Volume">Volume (24h)</th>
+                    <th id="VWAP">Volume-Weighted Average Price (24h)</th>
+                </tr>
+            </thead>
+            <tbody id="table1"></tbody>
+        </table>
+        <% } else { %>
+            <h2>Welcome to the Crypto Project</h2>
+            <p>Please either Log in if you have an account or Register to view Crypto Currencies to buy and sell. Thank you.</p>
+            <button id="Login" type="button">Login</button>
+            <button id="Register" type="button">Register</button>
+            <% } %>
+
+
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times; </span>
+                        <div>
+                            <h2>Cryptocurrency Details</h2>
+                        </div>
+                        <div class="modal-body">
+                            <table id="modalCryptoTable">
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Name</th>
+                                    <th>Symbol</th>
+                                    <th>Price (USD)</th>
+                                    <th>24th Change (%)</th>
+                                    <th>Market Cap (USD)</th>
+                                    <th>Supply</th>
+                                    <th>Volume (24h)</th>
+                                    <th>Volume-Weighted Average Price (24h)</th>
+                                    <th>Date added</th>
+                                    <th>Market Pairs</th>
+                                    <th>Infinite Supply(T/F)</th>
+                                </tr>
+                            </table>
+                            <form id="buy">
+                                <label for="quantity">Select Quantity:</label><br>
+                                <select id="Quantity" name="quantity">
+                                    <!-- Add options dynamically based on user preferences -->
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <!-- Add more options as needed -->
+                                </select><br>
+                                <input id="Buy" type="submit" value="Buy">
+                            </form>
+                            <div id="logContainer"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+</body>
+<script defer src="/js/global.js"></script>
+<script defer src="/js/home.js"></script>
+
+</html>

@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+th {
+    background-color:antiquewhite;
+    cursor: 1px solid;
+}
+
+th, td {
+    border: 1px solid;
+    color: brown;
+}
+
+#returnMessage {
+    background-color: black;
+    text-align: center;
+    color:antiquewhite
+}

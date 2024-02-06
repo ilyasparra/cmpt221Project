@@ -1,0 +1,19 @@
+body {
+    background-image: url('/images/image2.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+h1 {
+    background-color: rgb(246, 190, 117);
+    text-align: center;
+    color: brown;
+}
+
+h2 {
+    color: brown;
+    text-align: center;
+    text-size-adjust:initial;
+    font-size:x-large;
+}
